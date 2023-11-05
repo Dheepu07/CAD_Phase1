@@ -55,7 +55,7 @@ To enhance user engagement and storytelling, AI-generated captions are created f
 
 ## GitHub Repository
 
-The project's code and files can be found in the GitHub repository: [IBMCLOUDCOMPUTING-1](https://github.com/ANANTH-KARTHICK/IBMCLOUDCOMPUTING-1.git).
+The project's code and files can be found in the GitHub repository: [CAD_Phase1](https://github.com/Dheepu07/CAD_Phase1.git).
 
 ## Deployment Instructions
 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Recognition</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('your-background-image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .center-heading {
+            text-align: center;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        .upload-container {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #imageUpload {
+            display: none;
+        }
+
+        label.upload-label {
+            display: block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        img#uploadedImage {
+            max-width: 100%;
+            display: none;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            display: block;
+        }
+
+        ul#classifications, p#caption {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-heading">Image Recognition with AI Captions</h1>
+        <div class="upload-container">
+            <label for="imageUpload" class="upload-label">Upload Image</label>
+            <input type="file" accept="image/*" id="imageUpload" onchange="processImage()">
+            <img id="uploadedImage">
+        </div>
+
+        <h2 class="center-heading">Classified Objects:</h2>
+        <ul id="classifications"></ul>
+
+        <h2 class="center-heading">Generated Caption:</h2>
+        <p id="caption"></p>
+    </div>
+
+    <script>
+        function processImage() {
+            const imageUpload = document.getElementById('imageUpload');
+            const uploadedImage = document.getElementById('uploadedImage');
+            const classifications = document.getElementById('classifications');
+            const caption = document.getElementById('caption');
+
+            const file = imageUpload.files[0];
+            if (!file) {
+                return;
+            }
+
+            // Display the uploaded image
+            const imageURL = URL.createObjectURL(file);
+            uploadedImage.src = imageURL;
+            uploadedImage.style.display = 'block';
+
+            // Perform image classification using IBM Cloud Visual Recognition
+            // You'll need to use the IBM Visual Recognition API here
+
+            // Generate captions for recognized objects
+            // You'll need to use your chosen natural language generation library
+
+            // Update the web page with the classifications and caption
+            classifications.innerHTML = "<li>Object 1: DOG</li><li>Object 2: Confidence 0.85</li>";
+            caption.innerHTML = "A generated caption for the recognized objects";
+
+            // Handle API calls and caption generation here
+        }
+    </script>
+</body>
+</html>
